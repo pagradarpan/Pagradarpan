@@ -4,18 +4,19 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>पगरा दर्पण</title>
+<title>पगरा दर्पण | हमारा गाँव हमारी पहचान</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -23,13 +24,15 @@
 
 <header>
 
+<div class="container navbar">
+
 <div class="logo">
 
-<img src="images/logo.png" alt="Pagra Darpan Logo">
+<img src="logo.png" alt="लोगो">
 
 <div>
 
-<h1>पगरा दर्पण</h1>
+<h1>PAGRA DARPAN</h1>
 
 <p>हमारा गाँव, हमारी पहचान</p>
 
@@ -39,47 +42,69 @@
 
 <nav>
 
-<a href="#home">होम</a>
+<ul>
 
-<a href="#village">गाँव की जानकारी</a>
+<li><a href="#">होम</a></li>
 
-<a href="#thoughts">मेरी बात</a>
+<li><a href="#gaon">गाँव की जानकारी</a></li>
 
-<a href="#works">विकास कार्य</a>
+<li><a href="#meri-baat">मेरी बात</a></li>
 
-<a href="#officers">पदाधिकारी</a>
+<li><a href="#vikas">विकास कार्य</a></li>
+
+<li><a href="#adhikari">पदाधिकारी</a></li>
+
+</ul>
 
 </nav>
 
+</div>
+
 </header>
 
+<!-- ===== Slider ===== -->
 
+<section class="hero">
 
+<div class="container">
 
+<div class="slider">
 
-<section class="slider" id="home">
+<div class="slide active">
+<img src="images/slide1.jpg" alt="">
+</div>
 
-<div class="slides">
+<div class="slide">
+<img src="images/slide2.jpg" alt="">
+</div>
 
-<img src="images/slide1.jpg">
+<div class="slide">
+<img src="images/slide3.jpg" alt="">
+</div>
 
-<img src="images/slide2.jpg">
+<div class="slide">
+<img src="images/slide4.jpg" alt="">
+</div>
 
-<img src="images/slide3.jpg">
+<div class="slide">
+<img src="images/slide5.jpg" alt="">
+</div>
 
-<img src="images/slide4.jpg">
+<button class="prev">&#10094;</button>
 
-<img src="images/slide5.jpg">
+<button class="next">&#10095;</button>
+
+</div>
 
 </div>
 
 </section>
 
-
-
-
+<!-- ===== स्वागत ===== -->
 
 <section class="welcome">
+
+<div class="container">
 
 <h2>
 
@@ -87,83 +112,100 @@
 
 </h2>
 
-<p>
+<a
+class="green-btn"
+href="https://epanchayat.gov.in"
+target="_blank">
 
-यह वेबसाइट हमारे गाँव की जानकारी, पंचायत के कार्य और विचार आप तक पहुँचाने का एक सरल प्रयास है।
+<i class="fa-solid fa-file-lines"></i>
 
-</p>
-
-<a href="YAHA_PANCHAYAT_DARPAN_LINK_DALNA_HAI" target="_blank" class="btn">
-
-📄 पंचायत दर्पण पर पूरी जानकारी देखें
+पंचायत की पूरी जानकारी देखें
 
 </a>
 
-</section>
-
-
-
-
-
-<section id="village" class="card">
-
-<h2>
-
-🏠 गाँव की जानकारी
-
-</h2>
-
-<div class="info">
-
-<div>
-
-<p><b>ग्राम पंचायत :</b> पगरा</p>
-
-<p><b>जनपद :</b> गुनौर</p>
-
-<p><b>जिला :</b> पन्ना</p>
-
-<p><b>राज्य :</b> मध्यप्रदेश</p>
-
-<p><b>ग्राम प्रकार :</b> राजस्व ग्राम</p>
-
-</div>
-
-<img src="images/village.jpg">
-
 </div>
 
 </section>
+<!-- ===== गाँव की जानकारी ===== -->
 
+<section class="section" id="gaon">
 
+<div class="container">
 
-
-
-<section id="thoughts" class="card">
-
-<h2>
-
-💭 मेरी बात
-
+<h2 class="section-title">
+<i class="fa-solid fa-house"></i>
+गाँव की जानकारी
 </h2>
 
-<div class="post">
+<div class="grid-2">
 
-<img src="images/thought1.jpg">
+<div class="card">
 
-<div>
+<table class="info-table">
 
-<h3>
+<tr>
+<td>ग्राम पंचायत</td>
+<td>पगरा</td>
+</tr>
 
-यहाँ शीर्षक लिखें
+<tr>
+<td>जनपद पंचायत</td>
+<td>गुनौर</td>
+</tr>
 
+<tr>
+<td>जिला</td>
+<td>पन्ना</td>
+</tr>
+
+<tr>
+<td>राज्य</td>
+<td>मध्यप्रदेश</td>
+</tr>
+
+<tr>
+<td>ग्राम का प्रकार</td>
+<td>राजस्व ग्राम</td>
+</tr>
+
+<tr>
+<td>भौगोलिक स्थिति</td>
+<td>ग्रामीण क्षेत्र</td>
+</tr>
+
+<tr>
+<td>मुख्य भाषा</td>
+<td>हिन्दी</td>
+</tr>
+
+<tr>
+<td>मुख्य व्यवसाय</td>
+<td>कृषि एवं पशुपालन</td>
+</tr>
+
+<tr>
+<td>मुख्य फसलें</td>
+<td>गेहूँ, चना, सरसों, धान</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<img src="images/gaon.jpg" alt="गाँव">
+
+<h3 style="margin-top:20px;color:#1b5e20;">
+हमारा गाँव
 </h3>
 
-<p>
+<p style="margin-top:15px;">
 
-यहाँ आप अपने विचार लिख सकते हैं।
-
-फोटो और पूरा विवरण दोनों लिख सकते हैं।
+पगरा ग्राम पंचायत प्राकृतिक सुंदरता, खेती, शिक्षा,
+धार्मिक आस्था और सामाजिक एकता के लिए जानी जाती है।
+इस वेबसाइट का उद्देश्य गाँव की महत्वपूर्ण जानकारी,
+विकास कार्य और पंचायत से जुड़ी सूचनाएँ सभी तक पहुँचाना है।
 
 </p>
 
@@ -171,35 +213,40 @@
 
 </div>
 
+</div>
+
 </section>
 
+<!-- ===== मेरी बात ===== -->
 
+<section class="section" id="meri-baat">
 
+<div class="container">
 
+<h2 class="section-title">
 
-<section id="works" class="card">
+<i class="fa-solid fa-comments"></i>
 
-<h2>
-
-🏗️ विकास कार्य
+मेरी बात
 
 </h2>
 
+<div class="grid-2">
+
+<div class="card">
+
 <div class="post">
 
-<img src="images/work1.jpg">
+<img src="images/tree.jpg">
 
 <div>
 
-<h3>
-
-कार्य का नाम
-
-</h3>
+<h4>हमारा गाँव हमारी पहचान</h4>
 
 <p>
 
-यहाँ पंचायत के विकास कार्य की जानकारी लिखें।
+हम सबका कर्तव्य है कि अपने गाँव को स्वच्छ,
+सुंदर और विकसित बनाने में सहयोग करें।
 
 </p>
 
@@ -207,51 +254,223 @@
 
 </div>
 
+<div class="post">
+
+<img src="images/talab.jpg">
+
+<div>
+
+<h4>जल संरक्षण</h4>
+
+<p>
+
+तालाब, कुएँ और वर्षा जल संरक्षण
+हमारे भविष्य की सबसे बड़ी आवश्यकता है।
+
+</p>
+
+</div>
+
+</div>
+
+  </div>
+  <div class="post">
+
+<img src="images/khet.jpg" alt="खेती">
+
+<div>
+
+<h4>खेती और आत्मनिर्भरता</h4>
+
+<p>
+
+हमारा गाँव कृषि प्रधान है। आधुनिक खेती,
+जल संरक्षण और नई तकनीकों को अपनाकर
+गाँव को आत्मनिर्भर बनाया जा सकता है।
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/mandir.jpg" alt="मंदिर">
+
+<h3 style="color:#1b5e20;margin-bottom:15px;">
+
+पगरा की संस्कृति
+
+</h3>
+
+<p>
+
+पगरा गाँव अपनी धार्मिक आस्था, सामाजिक एकता
+और सांस्कृतिक परंपराओं के लिए जाना जाता है।
+यहाँ सभी त्योहार मिल-जुलकर मनाए जाते हैं।
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
+<!-- ===== विकास कार्य ===== -->
 
+<section class="section" id="vikas">
 
+<div class="container">
 
-<section id="officers" class="card">
+<h2 class="section-title">
 
-<h2>
+<i class="fa-solid fa-road"></i>
 
-👥 पदाधिकारी
+विकास कार्य
 
 </h2>
 
-<div class="officers">
+<div class="grid-3">
 
-<div class="box">
+<div class="card">
 
-<h3>सरपंच</h3>
+<h3>सड़क निर्माण</h3>
 
-<p>श्री/श्रीमती ________</p>
+<p>
 
-</div>
+गाँव की मुख्य सड़क के निर्माण एवं मरम्मत का कार्य।
 
-<div class="box">
-
-<h3>सचिव</h3>
-
-<p>श्री/श्रीमती ________</p>
+</p>
 
 </div>
 
-<div class="box">
+<div class="card">
 
-<h3>पंच</h3>
+<h3>तालाब सौंदर्यीकरण</h3>
 
-<p>नाम</p>
+<p>
+
+जल संरक्षण एवं सिंचाई सुविधा बढ़ाने हेतु कार्य।
+
+</p>
 
 </div>
 
-<div class="box">
+<div class="card">
 
-<h3>पंच</h3>
+<h3>विद्यालय विकास</h3>
 
-<p>नाम</p>
+<p>
+
+विद्यालय भवन एवं विद्यार्थियों के लिए सुविधाओं का विस्तार।
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>स्वच्छता अभियान</h3>
+
+<p>
+
+गाँव को स्वच्छ एवं सुंदर बनाने का निरंतर प्रयास।
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>वृक्षारोपण</h3>
+
+<p>
+
+हरियाली बढ़ाने एवं पर्यावरण संरक्षण के लिए पौधारोपण।
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>पेयजल व्यवस्था</h3>
+
+<p>
+
+हर घर तक स्वच्छ पेयजल पहुँचाने का प्रयास।
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+  </section>
+  <!-- ===== पदाधिकारी ===== -->
+
+<section class="section" id="adhikari">
+
+<div class="container">
+
+<h2 class="section-title">
+
+<i class="fa-solid fa-users"></i>
+
+पदाधिकारी
+
+</h2>
+
+<div class="grid-4">
+
+<div class="card officer">
+
+<img src="images/sarpanch.jpg" alt="सरपंच">
+
+<h4>सरपंच</h4>
+
+<span>यहाँ नाम लिखें</span>
+
+</div>
+
+<div class="card officer">
+
+<img src="images/sachiv.jpg" alt="सचिव">
+
+<h4>सचिव</h4>
+
+<span>यहाँ नाम लिखें</span>
+
+</div>
+
+<div class="card officer">
+
+<img src="images/panch1.jpg" alt="पंच">
+
+<h4>पंच</h4>
+
+<span>यहाँ नाम लिखें</span>
+
+</div>
+
+<div class="card officer">
+
+<img src="images/panch2.jpg" alt="पंच">
+
+<h4>पंच</h4>
+
+<span>यहाँ नाम लिखें</span>
+
+</div>
 
 </div>
 
@@ -261,15 +480,15 @@
 
 
 
-
+<!-- ===== Footer ===== -->
 
 <footer>
 
-<p>
+<div class="container footer-grid">
 
-© 2026 पगरा दर्पण
+<div>
 
-</p>
+<h3>पगरा दर्पण</h3>
 
 <p>
 
@@ -277,10 +496,42 @@
 
 </p>
 
+</div>
+
+<div>
+
+<h3>महत्वपूर्ण</h3>
+
+<p>
+
+इस वेबसाइट का उद्देश्य ग्राम पंचायत पगरा की जानकारी सरल भाषा में उपलब्ध कराना है।
+
+</p>
+
+</div>
+
+<div>
+
+<h3>आधिकारिक जानकारी</h3>
+
+<p>
+
+अधिक जानकारी के लिए ऊपर दिए गए
+
+"पंचायत की पूरी जानकारी देखें"
+
+बटन का उपयोग करें।
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
 <script src="script.js"></script>
 
 </body>
 
-</html>
+  </html>
