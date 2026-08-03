@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagra Darpan</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef7ee;margin:0;display:flex;justify-content:center;align-items:center;height:100vh}
+.card{background:#fff;padding:24px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.2);max-width:360px;text-align:center}
+h1{color:#157347;margin-top:0}
+button{background:#157347;color:#fff;border:none;padding:14px 20px;border-radius:8px;font-size:16px;cursor:pointer;width:100%}
+small{color:#555}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Pagra Darpan</h1>
+<p><b>ग्राम पंचायत:</b> पगरा<br>
+<b>जनपद:</b> गुन्नौर<br>
+<b>जिला:</b> पन्ना</p>
+
+<button onclick="openPortal()">Panchayat Darpan खोलें</button>
+
+<p><small>नोट: यह डेमो फ़ाइल है। अभी यह आपके सेव किए गए लिंक को खोलती है।</small></p>
+</div>
+
+<script>
+function openPortal(){
+window.location.href="https://mppanchayatdarpan.gov.in/Panchayat/Default.aspx?QS=1toq5aYOxj%2Fu%2FrP2C%2FDK0Q%3D%3D&ID=FF6puSif7SX140IAawfsmw%3D%3D";
+}
+</script>
+</body>
+</html>
