@@ -1,98 +1,191 @@
-// ===== PAGRA DARPAN =====
+/* =====================================
+   PAGRA DARPAN
+   script.js
+===================================== */
+
+// ================= Slider =================
 
 const slides = document.querySelectorAll(".slide");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
 
-let current = 0;
+const prevBtn = document.querySelector(".prev");
+
+const nextBtn = document.querySelector(".next");
+
+let currentSlide = 0;
 
 function showSlide(index){
 
-    slides.forEach(slide=>{
-        slide.classList.remove("active");
-    });
+slides.forEach(slide=>{
 
-    slides[index].classList.add("active");
+slide.classList.remove("active");
+
+});
+
+slides[index].classList.add("active");
+
 }
 
 function nextSlide(){
 
-    current++;
+currentSlide++;
 
-    if(current >= slides.length){
-        current = 0;
-    }
+if(currentSlide >= slides.length){
 
-    showSlide(current);
+currentSlide = 0;
+
+}
+
+showSlide(currentSlide);
+
 }
 
 function prevSlide(){
 
-    current--;
+currentSlide--;
 
-    if(current < 0){
-        current = slides.length - 1;
-    }
+if(currentSlide < 0){
 
-    showSlide(current);
+currentSlide = slides.length-1;
+
 }
 
-if(next){
-    next.addEventListener("click",nextSlide);
+showSlide(currentSlide);
+
 }
 
-if(prev){
-    prev.addEventListener("click",prevSlide);
+// Next Button
+
+if(nextBtn){
+
+nextBtn.addEventListener("click",()=>{
+
+nextSlide();
+
+});
+
 }
 
-// हर 5 सेकंड में स्लाइड बदलेगी
-setInterval(nextSlide,5000);
+// Previous Button
 
-// शुरू में पहली स्लाइड दिखाओ
-showSlide(current);
+if(prevBtn){
 
+prevBtn.addEventListener("click",()=>{
 
-// ===== Smooth Scroll =====
+prevSlide();
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+});
 
-    anchor.addEventListener("click",function(e){
+}
 
-        e.preventDefault();
+// Auto Slider
 
-        const target=document.querySelector(this.getAttribute("href"));
+setInterval(()=>{
 
-        if(target){
+nextSlide();
 
-            window.scrollTo({
+},4000);
 
-                top:target.offsetTop-70,
+showSlide(currentSlide);
+// ================= Smooth Scroll =================
 
-                behavior:"smooth"
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-            });
+anchor.addEventListener("click", function(e){
 
-        }
+e.preventDefault();
 
-    });
+const target = document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+window.scrollTo({
+
+top: target.offsetTop - 80,
+
+behavior: "smooth"
+
+});
+
+}
+
+});
 
 });
 
 
-// ===== Header Shadow =====
+
+// ================= Sticky Header Shadow =================
+
+const header = document.querySelector("header");
 
 window.addEventListener("scroll",()=>{
 
-    const header=document.querySelector("header");
+if(window.scrollY > 30){
 
-    if(window.scrollY>40){
+header.style.boxShadow="0 8px 25px rgba(0,0,0,.12)";
 
-        header.style.boxShadow="0 5px 20px rgba(0,0,0,.15)";
+}else{
 
-    }else{
+header.style.boxShadow="0 3px 15px rgba(0,0,0,.08)";
 
-        header.style.boxShadow="0 2px 10px rgba(0,0,0,.08)";
-
-    }
+}
 
 });
+
+
+
+// ================= Active Menu =================
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop = section.offsetTop - 120;
+
+const sectionHeight = section.clientHeight;
+
+if(window.pageYOffset >= sectionTop){
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+
+
+// ================= Image Safety =================
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.onerror=function(){
+
+this.style.display="none";
+
+};
+
+});
+
+
+
+console.log("Pagra Darpan Website Loaded Successfully");
