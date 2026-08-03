@@ -1,488 +1,630 @@
+/* ===================================
+   PAGRA DARPAN
+   STYLE.CSS
+=================================== */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Noto Sans Devanagari',sans-serif;
-    background:#f5f8f2;
-    color:#222;
-    line-height:1.6;
-}
 
-a{
-    text-decoration:none;
-    color:inherit;
+font-family:"Noto Sans Devanagari",sans-serif;
+
+background:#f5f8f2;
+
+color:#222;
+
+line-height:1.7;
+
+overflow-x:hidden;
+
 }
 
 img{
-    max-width:100%;
-    display:block;
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
-/* ===== Header ===== */
+
+
+/* ================= HEADER ================= */
 
 header{
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+position:sticky;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#ffffff;
+
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+z-index:999;
+
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:14px 0;
+
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
 }
 
 .logo img{
-    width:55px;
+
+width:65px;
+
+height:65px;
+
+object-fit:contain;
+
 }
 
 .logo h1{
-    font-size:30px;
-    color:#1b5e20;
-    font-weight:700;
+
+font-size:28px;
+
+color:#1b5e20;
+
+font-weight:800;
+
 }
 
 .logo p{
-    font-size:14px;
-    color:#444;
+
+font-size:14px;
+
+color:#666;
+
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:28px;
+
+display:flex;
+
+gap:28px;
+
 }
 
 nav ul li a{
-    font-weight:600;
-    transition:.3s;
+
+color:#222;
+
+font-weight:600;
+
+transition:.3s;
+
 }
 
 nav ul li a:hover{
-    color:#2e7d32;
+
+color:#2e7d32;
+
 }
 
-/* ===== Slider ===== */
+
+
+/* ================= HERO ================= */
 
 .hero{
-    margin-top:20px;
+
+position:relative;
+
+padding:35px 0 60px;
+
 }
 
 .slider{
-    position:relative;
-    overflow:hidden;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+position:relative;
+
+width:100%;
+
+height:500px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
 }
 
 .slide{
-    display:none;
+
+display:none;
+
+width:100%;
+
+height:100%;
+
 }
 
 .slide.active{
-    display:block;
+
+display:block;
+
 }
 
 .slide img{
-    width:100%;
-    height:520px;
-    object-fit:cover;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
 }
 
 .prev,
+
 .next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background:rgba(0,0,0,.5);
-    color:#fff;
-    font-size:24px;
-    cursor:pointer;
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.85);
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.prev:hover,
+
+.next:hover{
+
+background:#2e7d32;
+
+color:#fff;
+
 }
 
 .prev{
-    left:15px;
+
+left:20px;
+
 }
 
 .next{
-    right:15px;
+
+right:20px;
+
+}
+/* ================= WELCOME ================= */
+
+.hero-content{
+
+text-align:center;
+
+margin-top:40px;
+
 }
 
-/* ===== Welcome ===== */
+.hero-content h2{
 
-.welcome{
-    text-align:center;
-    padding:50px 20px;
+font-size:38px;
+
+color:#1b5e20;
+
+margin-bottom:18px;
+
+font-weight:800;
+
 }
 
-.welcome h2{
-    color:#1b5e20;
-    font-size:42px;
-    margin-bottom:20px;
+.hero-content p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#555;
+
+margin-bottom:30px;
+
 }
 
-.green-btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#198754;
-    color:#fff;
-    padding:18px 40px;
-    border-radius:12px;
-    font-size:24px;
-    font-weight:bold;
-    transition:.3s;
+.main-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:12px;
+
+background:#2e7d32;
+
+color:#fff;
+
+padding:15px 30px;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:.3s;
+
 }
 
-.green-btn:hover{
-    background:#146c43;
+.main-btn:hover{
+
+background:#1b5e20;
+
+transform:translateY(-3px);
+
 }
-/* ===== सेक्शन ===== */
+
+
+
+/* ================= SECTION ================= */
 
 .section{
-    padding:60px 0;
+
+padding:80px 0;
+
 }
 
 .section-title{
-    font-size:34px;
-    color:#1b5e20;
-    margin-bottom:30px;
-    border-left:6px solid #2e7d32;
-    padding-left:15px;
+
+text-align:center;
+
+margin-bottom:45px;
+
 }
 
-/* ===== कार्ड ===== */
+.section-title h2{
 
-.card{
-    background:#fff;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
+font-size:34px;
+
+color:#1b5e20;
+
+margin-bottom:10px;
+
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.section-title p{
+
+color:#666;
+
+font-size:17px;
+
 }
 
-.grid-2{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
 
-.grid-3{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
 
-.grid-4{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
+/* ================= VILLAGE ================= */
 
-/* ===== गाँव की जानकारी ===== */
+.village-grid{
 
-.info-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-.info-table td{
-    padding:12px;
-    border-bottom:1px solid #eee;
-    font-size:18px;
-}
-
-.info-table td:first-child{
-    font-weight:bold;
-    color:#1b5e20;
-}
-
-/* ===== मेरी बात / विकास कार्य ===== */
-
-.post{
-    display:flex;
-    gap:18px;
-    margin-bottom:22px;
-}
-
-.post img{
-    width:150px;
-    height:100px;
-    object-fit:cover;
-    border-radius:12px;
-}
-
-.post h4{
-    margin-bottom:8px;
-    color:#1b5e20;
-}
-
-.post p{
-    font-size:15px;
-}
-
-/* ===== पदाधिकारी ===== */
-
-.officer{
-    text-align:center;
-}
-
-.officer img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    margin:auto;
-    object-fit:cover;
-    margin-bottom:15px;
-    border:4px solid #2e7d32;
-}
-
-.officer h4{
-    color:#1b5e20;
-    margin-bottom:5px;
-}
-
-.officer span{
-    color:#666;
-}
-
-/* ===== Footer ===== */
-
-footer{
-    margin-top:60px;
-    background:#1b5e20;
-    color:#fff;
-    padding:45px 0;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-footer h3{
-    margin-bottom:15px;
-}
-
-footer p{
-    opacity:.9;
-}
-
-/* ===== Responsive ===== */
-
-@media(max-width:900px){
-
-.grid-2,
-.grid-3,
-.grid-4,
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-nav ul{
-display:none;
-}
-
-.logo h1{
-font-size:24px;
-}
-
-.welcome h2{
-font-size:30px;
-}
-
-.slide img{
-height:260px;
-}
-
-.post{
-flex-direction:column;
-}
-
-.post img{
-width:100%;
-height:220px;
-}
-
-    }
-/* ===== गाँव की जानकारी ===== */
-
-.info-grid{
 display:grid;
-grid-template-columns:2fr 1fr;
-gap:30px;
+
+grid-template-columns:1.4fr 1fr;
+
+gap:35px;
+
 align-items:center;
+
+margin-bottom:40px;
+
+}
+
+.village-card{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.village-card table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.village-card td{
+
+padding:14px;
+
+border-bottom:1px solid #ececec;
+
+font-size:17px;
+
+}
+
+.village-card td:first-child{
+
+font-weight:700;
+
+color:#1b5e20;
+
+width:45%;
+
+}
+
+.village-image img{
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+
+/* ================= INFO BOX ================= */
+
+.info-boxes{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
 }
 
 .info-box{
+
 background:#fff;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
 
-.info-table{
-width:100%;
-border-collapse:collapse;
-}
+padding:30px;
 
-.info-table td{
-padding:14px;
-border-bottom:1px solid #eee;
-font-size:18px;
-}
+border-radius:18px;
 
-.info-table td:first-child{
-font-weight:bold;
-color:#1b5e20;
-width:45%;
-}
+text-align:center;
 
-.info-image img{
-width:100%;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 
-@media(max-width:900px){
-
-.info-grid{
-grid-template-columns:1fr;
-}
-
-    }
-/* ===== मेरी बात ===== */
-
-.posts{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.post-card{
-background:#fff;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
 transition:.3s;
+
 }
 
-.post-card:hover{
-transform:translateY(-6px);
+.info-box:hover{
+
+transform:translateY(-8px);
+
 }
 
-.post-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
+.info-box i{
 
-.post-content{
-padding:20px;
-}
+font-size:40px;
 
-.post-content h3{
-color:#1b5e20;
-margin-bottom:10px;
-}
+color:#2e7d32;
 
-.post-content p{
-line-height:1.7;
 margin-bottom:15px;
+
 }
 
-.date{
-color:#777;
-font-size:14px;
-}/* ===== विकास कार्य ===== */
+.info-box h3{
+
+margin-bottom:10px;
+
+color:#1b5e20;
+
+}
+
+.info-box p{
+
+color:#555;
+
+}
+/* ================= THOUGHTS ================= */
+
+.thought-card{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.thought-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+min-height:320px;
+
+}
+
+.thought-content{
+
+padding:35px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.thought-content h3{
+
+font-size:30px;
+
+color:#1b5e20;
+
+margin-bottom:15px;
+
+}
+
+.thought-content p{
+
+font-size:17px;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+.thought-content span{
+
+font-size:15px;
+
+color:#888;
+
+}
+
+
+
+/* ================= DEVELOPMENT ================= */
 
 .work-grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+grid-template-columns:repeat(3,1fr);
+
 gap:25px;
+
 }
 
 .work-card{
+
 background:#fff;
-border-radius:15px;
+
+border-radius:18px;
+
 overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
 transition:.3s;
+
 }
 
 .work-card:hover{
-transform:translateY(-6px);
+
+transform:translateY(-8px);
+
 }
 
 .work-card img{
+
 width:100%;
+
 height:220px;
+
 object-fit:cover;
+
 }
 
 .work-card h3{
-padding:18px 18px 8px;
+
+padding:18px 18px 10px;
+
 color:#1b5e20;
+
+font-size:22px;
+
 }
 
 .work-card p{
-padding:0 18px 15px;
-line-height:1.7;
+
+padding:0 18px 20px;
+
+color:#555;
+
 }
 
-.status{
-display:inline-block;
-margin:0 18px 20px;
-padding:8px 16px;
-border-radius:30px;
-font-weight:bold;
-font-size:14px;
-}
 
-.done{
-background:#d4edda;
-color:#1b5e20;
-}
 
-.progress{
-background:#fff3cd;
-color:#856404;
-    }
-/* ===== पदाधिकारी ===== */
+/* ================= OFFICERS ================= */
 
 .officer-grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(4,1fr);
 
-gap:25px;
+gap:20px;
 
 }
 
@@ -494,9 +636,9 @@ padding:30px;
 
 text-align:center;
 
-border-radius:15px;
+border-radius:18px;
 
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 transition:.3s;
 
@@ -508,144 +650,168 @@ transform:translateY(-8px);
 
 }
 
-.icon{
-
-font-size:60px;
-
-margin-bottom:15px;
-
-}
-
 .officer-card h3{
 
 color:#1b5e20;
 
 margin-bottom:10px;
 
+font-size:22px;
+
 }
 
 .officer-card p{
 
-color:#555;
+color:#666;
 
 font-size:17px;
 
-    }
+}
 
-/* ===== Footer ===== */
 
-.footer{
 
-background:#0d5c2f;
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#1b5e20;
 
 color:#fff;
 
-margin-top:70px;
+text-align:center;
 
-padding:60px 0 20px;
+padding:45px 20px;
 
-}
-
-.footer-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:40px;
+margin-top:80px;
 
 }
 
-.footer h3{
+footer h2{
 
-margin-bottom:20px;
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+footer p{
+
+margin:8px 0;
+
+font-size:17px;
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:992px){
+
+.header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.slider{
+
+height:350px;
+
+}
+
+.village-grid,
+
+.thought-card{
+
+grid-template-columns:1fr;
+
+}
+
+.info-boxes{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.work-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.officer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero-content h2{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.logo h1{
 
 font-size:24px;
 
 }
 
-.footer p{
+.hero-content h2{
 
-line-height:1.8;
-
-}
-
-.footer ul{
-
-list-style:none;
-
-padding:0;
+font-size:25px;
 
 }
 
-.footer ul li{
+.hero-content p{
 
-margin-bottom:12px;
-
-}
-
-.footer ul li a{
-
-color:#fff;
-
-text-decoration:none;
+font-size:16px;
 
 }
 
-.footer-btn{
+.info-boxes,
 
-display:inline-block;
+.officer-grid{
 
-margin-top:20px;
-
-background:#28a745;
-
-padding:12px 24px;
-
-border-radius:10px;
-
-color:#fff;
-
-font-weight:bold;
-
-text-decoration:none;
-
-transition:.3s;
+grid-template-columns:1fr;
 
 }
 
-.footer-btn:hover{
+.slider{
 
-background:#218838;
-
-}
-
-.footer hr{
-
-margin:40px 0 20px;
-
-border:none;
-
-border-top:1px solid rgba(255,255,255,.2);
+height:250px;
 
 }
 
-.copyright{
+.main-btn{
 
-text-align:center;
+width:100%;
 
-font-size:15px;
-
-opacity:.9;
+justify-content:center;
 
 }
 
-@media(max-width:768px){
-
-.footer{
-
-text-align:center;
-
 }
-
-    }
