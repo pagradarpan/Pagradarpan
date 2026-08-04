@@ -26,12 +26,24 @@
     "date": "04 अगस्त 2026"
   },
 
-  "officers": {
-    "sarpanch": "पूजा अहिरवार",
-    "upsarpanch": "",
-    "secretary": "",
-    "rojgar": ""
+  "officers": [
+  {
+    "post": "सरपंच",
+    "name": "पूजा अहिरवार"
   },
+  {
+    "post": "उपसरपंच",
+    "name": ""
+  },
+  {
+    "post": "सचिव",
+    "name": ""
+  },
+  {
+    "post": "रोजगार सहायक",
+    "name": ""
+  }
+],
   "works": [
   {
     "title": "नया विकास कार्य",
