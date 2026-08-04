@@ -207,16 +207,14 @@ fetch("data.json")
     if(heroDesc) heroDesc.textContent = data.hero.description;
 
     // Village Table
-    const villageValues = document.querySelectorAll(".village-card td:nth-child(2)");
-
-    villageValues[0].textContent = data.village.name;
-    villageValues[1].textContent = data.village.janpad;
-    villageValues[2].textContent = data.village.district;
-    villageValues[3].textContent = data.village.state;
-    villageValues[4].textContent = data.village.language;
-    villageValues[5].textContent = data.village.business;
-    villageValues[6].textContent = data.village.pincode;
-    villageValues[7].textContent = data.village.population;
+    document.getElementById("village-name").textContent = data.village.name;
+document.getElementById("janpad").textContent = data.village.janpad;
+document.getElementById("district").textContent = data.village.district;
+document.getElementById("state").textContent = data.village.state;
+document.getElementById("language").textContent = data.village.language;
+document.getElementById("business").textContent = data.village.business;
+document.getElementById("pincode").textContent = data.village.pincode;
+document.getElementById("population").textContent = data.village.population;
 
     // Thought
     document.querySelector(".thought-content h3").textContent = data.thought.title;
