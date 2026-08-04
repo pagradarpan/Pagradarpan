@@ -215,7 +215,10 @@ document.getElementById("language").textContent = data.village.language;
 document.getElementById("business").textContent = data.village.business;
 document.getElementById("pincode").textContent = data.village.pincode;
 document.getElementById("population").textContent = data.village.population;
-
+document.getElementById("box-village").textContent = data.village.name;
+document.getElementById("box-district").textContent = data.village.district;
+document.getElementById("box-business").textContent = data.village.business;
+document.getElementById("box-state").textContent = data.village.state;
     // Thought
     document.querySelector(".thought-content h3").textContent = data.thought.title;
     document.querySelector(".thought-content p").textContent = data.thought.text;
