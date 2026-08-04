@@ -64,5 +64,28 @@
     "description": "यहाँ तीसरे विकास कार्य का विवरण लिखें।",
     "image": "images/slide1.jpg"
   }
+  ],
+  "slider": [
+  {
+    "image": "images/slide1.jpg",
+    "alt": "पगरा गाँव"
+  },
+  {
+    "image": "images/slide2.jpg",
+    "alt": "पंचायत भवन"
+  },
+  {
+    "image": "images/slide3.jpg",
+    "alt": "ग्राम सभा"
+  },
+  {
+    "image": "images/slide4.jpg",
+    "alt": "विकास कार्य"
+  },
+  {
+    "image": "images/slide5.jpg",
+    "alt": "प्राकृतिक दृश्य"
+  }
   ]
+  
 }
