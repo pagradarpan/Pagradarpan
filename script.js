@@ -189,3 +189,49 @@ this.style.display="none";
 
 
 console.log("Pagra Darpan Website Loaded Successfully");
+
+// ================= Load Data From data.json =================
+
+fetch("data.json")
+.then(response => response.json())
+.then(data => {
+
+    // Website Title
+    document.title = data.website.title + " | " + data.website.tagline;
+
+    // Hero Section
+    const heroHeading = document.querySelector(".hero-content h2");
+    const heroDesc = document.querySelector(".hero-content p");
+
+    if(heroHeading) heroHeading.textContent = data.hero.heading;
+    if(heroDesc) heroDesc.textContent = data.hero.description;
+
+    // Village Table
+    const villageValues = document.querySelectorAll(".village-card td:nth-child(2)");
+
+    villageValues[0].textContent = data.village.name;
+    villageValues[1].textContent = data.village.janpad;
+    villageValues[2].textContent = data.village.district;
+    villageValues[3].textContent = data.village.state;
+    villageValues[4].textContent = data.village.language;
+    villageValues[5].textContent = data.village.business;
+    villageValues[6].textContent = data.village.pincode;
+    villageValues[7].textContent = data.village.population;
+
+    // Thought
+    document.querySelector(".thought-content h3").textContent = data.thought.title;
+    document.querySelector(".thought-content p").textContent = data.thought.text;
+    document.querySelector(".thought-content span").textContent = data.thought.date;
+
+    // Officers
+    const officers = document.querySelectorAll(".officer-card p");
+
+    officers[0].textContent = data.officers.sarpanch;
+    officers[1].textContent = data.officers.upsarpanch;
+    officers[2].textContent = data.officers.secretary;
+    officers[3].textContent = data.officers.rojgar;
+
+})
+.catch(error => {
+    console.log("data.json load nahi hua:", error);
+});
