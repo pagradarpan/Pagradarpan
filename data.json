@@ -31,5 +31,22 @@
     "upsarpanch": "",
     "secretary": "",
     "rojgar": ""
+  },
+  "works": [
+  {
+    "title": "कार्य 1",
+    "description": "यहाँ पहले विकास कार्य का विवरण लिखें।",
+    "image": "images/slide4.jpg"
+  },
+  {
+    "title": "कार्य 2",
+    "description": "यहाँ दूसरे विकास कार्य का विवरण लिखें।",
+    "image": "images/slide5.jpg"
+  },
+  {
+    "title": "कार्य 3",
+    "description": "यहाँ तीसरे विकास कार्य का विवरण लिखें।",
+    "image": "images/slide1.jpg"
   }
+  ]
 }
