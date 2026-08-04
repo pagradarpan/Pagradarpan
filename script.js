@@ -223,7 +223,23 @@ document.getElementById("box-state").textContent = data.village.state;
     document.querySelector(".thought-content h3").textContent = data.thought.title;
     document.querySelector(".thought-content p").textContent = data.thought.text;
     document.querySelector(".thought-content span").textContent = data.thought.date;
+// ================= Development Works =================
 
+const workGrid = document.getElementById("work-grid");
+
+if (workGrid) {
+    workGrid.innerHTML = "";
+
+    data.works.forEach(work => {
+        workGrid.innerHTML += `
+            <div class="work-card">
+                <img src="${work.image}" alt="${work.title}">
+                <h3>${work.title}</h3>
+                <p>${work.description}</p>
+            </div>
+        `;
+    });
+      }
     // Officers
     const officers = document.querySelectorAll(".officer-card p");
 
