@@ -240,14 +240,23 @@ if (workGrid) {
         `;
     });
       }
-    // Officers
-    const officers = document.querySelectorAll(".officer-card p");
+    
+// ================= Officers =================
 
-    officers[0].textContent = data.officers.sarpanch;
-    officers[1].textContent = data.officers.upsarpanch;
-    officers[2].textContent = data.officers.secretary;
-    officers[3].textContent = data.officers.rojgar;
+const officerGrid = document.getElementById("officer-grid");
 
+if (officerGrid) {
+    officerGrid.innerHTML = "";
+
+    data.officers.forEach(officer => {
+        officerGrid.innerHTML += `
+            <div class="officer-card">
+                <h3>${officer.post}</h3>
+                <p>${officer.name}</p>
+            </div>
+        `;
+    });
+           }
 })
 .catch(error => {
     console.log("data.json load nahi hua:", error);
