@@ -220,9 +220,9 @@ document.getElementById("box-district").textContent = data.village.district;
 document.getElementById("box-business").textContent = data.village.business;
 document.getElementById("box-state").textContent = data.village.state;
     // Thought
-    document.querySelector(".thought-content h3").textContent = data.thought.title;
-    document.querySelector(".thought-content p").textContent = data.thought.text;
-    document.querySelector(".thought-content span").textContent = data.thought.date;
+    document.getElementById("thought-title").textContent = data.thought.title;
+document.getElementById("thought-text").textContent = data.thought.text;
+document.getElementById("thought-date").textContent = data.thought.date;
 // ================= Development Works =================
 
 const workGrid = document.getElementById("work-grid");
