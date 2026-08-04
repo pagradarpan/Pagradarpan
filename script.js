@@ -223,6 +223,7 @@ document.getElementById("box-state").textContent = data.village.state;
     document.getElementById("thought-title").textContent = data.thought.title;
 document.getElementById("thought-text").textContent = data.thought.text;
 document.getElementById("thought-date").textContent = data.thought.date;
+   document.getElementById("thought-image").src = data.thought.image;
 // ================= Development Works =================
 
 const workGrid = document.getElementById("work-grid");
